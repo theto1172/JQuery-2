@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Car Example</title>
+</head>
+<body>
+	<h1>Car Example </h1>
+
+	<script> 
+		const carManufacture = {
+			name: "Honda",
+			model:"Accord",
+			trimLevel:"ex",
+			baseFeatures: ["wheeles","engine","seats"],
+			entertainment: "crappy audio system"
+
+		}
+
+		const dealership = Object.create(carManufacture);
+
+		dealership.equipment = "roof rack";
+		dealership.warranty = "extended";
+		dealership.branding = "license plate frame";
+
+		const myCar = Object.create(dealership);
+
+		myCar.custom = "after market trailer hitch";
+		myCar.bumperSticker = "Save the Llamas!";
+		myCar.entertainment = "fancy audio system";
+
+		/*console.log(myCar.model);
+		console.log(myCar.branding);
+		console.log(myCar.entertainment);*/
+
+		for( const key in myCar){
+			if( myCar.hasOwnProperty(key)){
+				const val = myCar[key];
+			console.log(`key is "${key}" and value is "${val}"`);
+			}
+		}
+
+	</script>
+
+</body>
+</html>

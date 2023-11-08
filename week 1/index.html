@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Form Basics</title>
+	<style>
+	    input,label{
+	    	display: block;
+	    }
+	    input{
+	    	margin-bottom: 15px;
+	    } 
+
+	    fieldset input, fieldset label{
+	    	display: inline;
+	    }
+
+
+    </style>
+</head>
+<body>
+	<h1>Form Basics</h1>
+	<Form method="post" action="processor.php"> 
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="fname" placeholder="Bill" required>
+		<label for="favcolor">Favorite Color</label>
+		<input type="color" name="favcolor" id="favcolor">
+
+
+        <fieldset>
+        	<legend>Do You Want Spam?</legend>
+	        <input type="radio" name="spam" id="spam-yes" value="yes">
+	        <label for="spam-yes">Yes,Send me spam!</label>
+
+	        <input type="radio" name="spam" id="spam-no" value="no" checked>
+	        <label for="spam-no">No, don't send spam</label>
+       </fieldset>
+
+       <fieldset>
+        	<legend>Favorite Animal</legend>
+	        <input type="checkbox" name="animal[]" id="cat" value="Cat">
+	        <label for="cat">Cat</label>
+
+	        <input type="checkbox" name="animal[]" id="dog" value="Dog" checked>
+	        <label for="dog">Dog</label>
+
+	        <input type="checkbox" name="animal[]" id="llama" value="Llama" checked>
+	        <label for="llama">Llama</label>
+       </fieldset>
+
+       <label for="cheese">Favorite Cheese</label>
+       <select id="cheese" name="favcheese">
+       	   <option>----</option>
+           <option value="American">American</option>
+           <option value="Swiss">Swiss</option>
+           <option value="Brie">Brie</option> 
+       </select>
+
+       <label for="comment">Please Tell Us What You Think </label>    
+       <textarea name="comment" id="comment" rows="10" cols="50" placeholder="Your comments"></textarea>
+
+       <input type="submit" name="submit" id="submit" value="send form">
+
+	</Form>
+
+</body>
+</html>
